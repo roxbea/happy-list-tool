@@ -7,4 +7,14 @@ export default defineConfig({
     TanStackRouterVite(),
     react(),
   ],
+  // ESTO ES LO QUE DESTRIBA EL ERROR DEL CLIENTE:
+  resolve: {
+    alias: {
+      // Le dice al navegador que si ve una importación de Node, no se rompa y use un objeto vacío
+      'node:async_hooks': 'empty-module',
+    },
+  },
+  optimizeDeps: {
+    exclude: ['@tanstack/start-storage-context']
+  }
 });
