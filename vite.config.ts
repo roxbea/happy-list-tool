@@ -7,8 +7,4 @@ export default defineConfig({
     TanStackRouterVite(),
     react(),
   ],
-  // Esto obliga a Vite a procesar estas librerías en el bundle y evita el error de Node
-  ssr: {
-    noExternal: true,
-  },
 });
