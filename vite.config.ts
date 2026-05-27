@@ -7,4 +7,8 @@ export default defineConfig({
     TanStackRouterVite(),
     react(),
   ],
+  // Le avisamos a Vite que permita el uso de módulos de Node en el build de servidor
+  ssr: {
+    noExternal: ['@tanstack/start', '@tanstack/start-storage-context'],
+  }
 });
