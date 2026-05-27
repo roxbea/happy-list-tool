@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  plugins: [react()],
+  root: 'src/routes', // <--- ESTO le dice a Vite que use tu index de ahí adentro
+  build: {
+    outDir: '../../../dist', // <--- Esto saca la compilación afuera, a la raíz real
+  }
 });
